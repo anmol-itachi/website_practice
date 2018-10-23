@@ -2,7 +2,7 @@ from django.urls import path
 from .import views
 app_name='music'
 urlpatterns = [
-    # /music
+    # /music1
     path('', views.IndexView.as_view(), name='index'),
     #register
     path('register/', views.UserFormView.as_view(), name='register'),
