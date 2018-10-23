@@ -1,0 +1,24 @@
+{% extends 'music/base.html' %}
+{% block body %}
+{% block title %}Album title{% endblock %}
+<h1>{{album.album_title  }}</h1>
+<h3>{{ album.artist }}</h3>
+{% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+{% endif %}
+<form action=""method="post">
+    {% csrf_token %}
+    {% for song in album.song_set.all %}
+        <h3>{{ song.song_title }}</h3>
+
+
+    {% endfor %}
+
+
+</form>
+
+    <a href="{% url 'music:details' album.id %}">
+        <img src="{{ album.album_logo.url }}" class="img-responsive">
+    </a>
+
+{% endblock %}

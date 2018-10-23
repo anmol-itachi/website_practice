@@ -1,0 +1,16 @@
+body{
+   /* background-color: #0c14ff;*/
+    color: #ff3c51;
+
+}
+h3{
+    color: #30ff09;
+}
+
+.navbar{
+    border-radius: 0px;
+}
+.navbar-brand{
+    font-family:  'Satisfy', cursive;
+    color:red;
+}
